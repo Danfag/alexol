@@ -65,6 +65,7 @@ class Alex {
 
 public:
   // Value type, returned by dereferencing an iterator
+  static constexpr auto TYPE_NAME = "ALEX"; 
   typedef std::pair<T, P> V;
 
   // ALEX class aliases
@@ -3607,3 +3608,11 @@ public:
   }
 };
 } // namespace alexol
+namespace AlexModule{
+static void AlexModule::RegisterIndex(ExtensionLoader &loader){
+IndexType index_type;
+
+index_type.name=Alex::Type_NAME;
+index.create_instance=
+}
+}
